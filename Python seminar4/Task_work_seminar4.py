@@ -165,16 +165,5 @@ for k, v in m.items():
         if k in n:
                 if n[k] == v:
                      print(s)
-                else: 
-                     s == False
-        print(s)
-
-# if m.keys() == n.keys():
-#         print(s)
-# else: 
-#     s = False
-# print(s)
-
-
 
 
