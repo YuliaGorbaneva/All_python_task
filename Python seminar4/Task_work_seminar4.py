@@ -154,6 +154,7 @@ hol = '222anton456'  #, 'a1n1t1o1n1', '0000a0000n00t00000o000000n', 'gylfole', '
 for i in range(len(virus)):
         m = dict.fromkeys(virus[i], virus [i])
         print(m, end= ', ')
+print(type(virus))
 print()
 print('---------')
 
@@ -165,5 +166,6 @@ for k, v in m.items():
         if k in n:
                 if n[k] == v:
                      print(s)
+
 
 
