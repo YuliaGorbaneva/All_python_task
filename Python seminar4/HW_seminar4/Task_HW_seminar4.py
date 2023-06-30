@@ -11,28 +11,28 @@ import random
 # 3 6 9 12 15 18
 # 6 12
 
-# print("Введите длину первого массива: ")
-# n = int(input())
-# print("Введите длину второго массива: ")
-# m = int(input())
+print("Введите длину первого массива: ")
+n = int(input())
+print("Введите длину второго массива: ")
+m = int(input())
 
-# mass_1 = []
-# mass_2 = []
-# print("Введите элементы первого массива:")
-# for i in range(n):
-#     mass_1.append(int(input()))
-#     # mass_1.append(random.randint(1, 20))
-# for j in range(m):
-#     mass_2.append(random.randint(1, 20))
+mass_1 = []
+mass_2 = []
+print("Введите элементы первого массива:")
+for i in range(n):
+    mass_1.append(int(input()))
+    # mass_1.append(random.randint(1, 20))
+for j in range(m):
+    mass_2.append(random.randint(1, 20))
 
-# print(mass_1)
-# print(mass_2)
-# mass_1.sort()
-# mass_2.sort()
+print(mass_1)
+print(mass_2)
+mass_1.sort()
+mass_2.sort()
 
-# mass_3 = list(set(mass_1 + mass_2))
+mass_3 = list(set(mass_1 + mass_2))
 
-# print(mass_3)
+print(mass_3)
 
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
