@@ -41,15 +41,15 @@
 # При описании рекурсии важно указать, когда функции надо остановиться и перестать вызывать саму себя.
 # ПО-другому говоря , необходимо указать базис рекурсии
 
-# def  Fib(n):
-#     if n in [1, 2]:
-#         return 1
-#     return Fib(n-1) + Fib(n-2)
+def  Fib(n):
+    if n in [1, 2]:
+        return 1
+    return Fib(n-1) + Fib(n-2)
 
-# list_1 = []
-# for i in range(1, 10):
-#     list_1.append(Fib(i))
-# print(list_1)
+list_1 = []
+for i in range(1, 10):
+    list_1.append(Fib(i))
+print(list_1)
 
 
 # Алгоритмы - набор инструкций для выполнения некоторой задачи
