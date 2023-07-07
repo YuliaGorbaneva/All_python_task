@@ -42,6 +42,8 @@ print("Введите максимальный диапозон поиска:")
 maxx = int(input())
 list_2 =[]
 def Indexx(list_2):
+    if maxx - 1 > lenn:
+        return False
     for i in range(len(list_1)):
             if list_1[i] > 0:
                 if i >= minn and i <= maxx:
