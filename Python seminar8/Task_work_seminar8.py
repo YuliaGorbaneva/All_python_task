@@ -16,8 +16,8 @@
 
 # def ShowMenu():
 #     print("\nВыберите необходимое действие:\n"
-#         "1. Отобразить весь справочник\n"
-#         "2. Отобразить справочник с шапками\n"
+#         "1. Открыть справочник\n"
+#         "2. Показать контакты справочника\n"
 #         "3. Добавить контакт\n"
 #         "4. Изменить данные контакта\n"
 #         "5. Удалить контакт\n"
@@ -53,13 +53,12 @@ def PrintForKey(telDirect: list):
         for key, value in contact.items:
             print(f'{key}: {value}', end=";")
         # print()
-# PrintForKey(OpenListGroup)
 
 def ShowPhonebook(filename):
-    contacts = sorted(OpenListGroup(filename), key=lambda x: x['Имя'])
+    contacts = sorted(OpenListGroup(filename), key=lambda x: x['Фамилия'])
     PrintForKey(contacts)
     return contacts
-ShowPhonebook('telPhone.txt')
+# ShowPhonebook('telPhone.txt')
         
 
 
@@ -178,21 +177,22 @@ ShowPhonebook('telPhone.txt')
 #             line = ' '.join(contact) + '\n'
 #             file.write(line)
 
-# def WorkWithPhonebook():
-#     choice = ShowMenu()
-#     phonebook = ReadFile('telPhone.txt')
-#     while (choice != 7):
-#         if choice == 1:
-#             ShowPhonebook(phonebook)
-#         elif choice == 2:
-#             contact_list = ReadFile(phonebook)
-#             FindNumber(contact_list)
-#         elif choice == 3:
-#             AddPhoneNumber(phonebook)
-#         elif choice == 4:
-#             ChangePhoneNumber(phonebook)
-#         elif choice == 5:
-#             DeleteContact(phonebook)
-#         choice = ShowMenu()
+def WorkWithPhonebook():
+    choice = ShowMenu()
+    phonebook ='telPhone.txt'
+    phonebookRead =  ReadFile('telPhone.txt')
+    while (choice != 7):
+        if choice == 1:
+            OpenFile(phonebook)
+        elif choice == 2:
+            telDirect = OpenListGroup(phonebookRead)
+            FindNumber(telDirect)
+        elif choice == 3:
+            AddPhoneNumber(phonebook)
+        elif choice == 4:
+            ChangePhoneNumber(phonebook)
+        elif choice == 5:
+            DeleteContact(phonebook)
+        choice = ShowMenu()
 
 # WorkWithPhonebook()    
